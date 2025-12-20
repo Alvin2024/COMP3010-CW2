@@ -1,6 +1,8 @@
 # COMP3010-CW2
 COMP3010 – CW2 
+
 Student: Alvin Mparutsa.
+
 Module: COMP3010 Security Operations & Incident Management.
 
 1.Introduction:
