@@ -26,3 +26,13 @@ Step 3 – Restricted results to IAM user activity. This was done by filtering e
 Step 4 – Extracted the usernames to collect the unique IAM usernames that appeared in the cloud trail events.
 
 Step 5 – Formatted the output to align with the requirements of the quiz.
+
+Question 2:
+
+Step 1 – Excluded the console login events by “NoteventNmae=ConsoleLogin” this made the results only cover API activity and not sign ins.
+
+Step 2 – a keyword search was used for MFA related fields, this is so that fields containg mfa context would be returned.
+
+Step 3 – opened the events in order where the log shows False.
+
+Step 4 – Recorded the full JSON path for the field using the order that I opened the event. 
