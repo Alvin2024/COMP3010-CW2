@@ -5,7 +5,7 @@ Student: Alvin Mparutsa.
 
 Module: COMP3010 Security Operations & Incident Management.
 
-1.Introduction:
+# 1.Introduction:
 
 This report is used to document an investigation carried out in Splunk, This is done using the BOTSv3 dataset. The dataset is used to simulate a security scenario within a fictional organisation. 
 Objectives:
@@ -13,9 +13,9 @@ Objectives:
 -	Use the Splunk to help answer the question set and each answer should be supported with evidence
 -	Present the findings as a SOC-style report which is led by the evidence.
 
-Evidence: 
+# Evidence: 
 
-Question 1:
+# Question 1:
 
 Step 1 – Opened Splunk search and reporting section and confirmed that the dataset was available. Checked the botsv3 index contained events by setting the range to ALL time so that any missing older vlogs are avoided. 
 
@@ -27,7 +27,7 @@ Step 4 – Extracted the usernames to collect the unique IAM usernames that appe
 
 Step 5 – Formatted the output to align with the requirements of the quiz.
 
-Question 2:
+# Question 2:
 
 Step 1 – Excluded the console login events by “NoteventNmae=ConsoleLogin” this made the results only cover API activity and not sign ins.
 
@@ -37,7 +37,7 @@ Step 3 – opened the events in order where the log shows False.
 
 Step 4 – Recorded the full JSON path for the field using the order that I opened the event. 
 
-Question 3:
+# Question 3:
 
 Step 1 – First checked what source types were available in the dataset by using the source count query. This then confirmed there is hardware source type available.
 
