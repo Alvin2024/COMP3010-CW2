@@ -45,4 +45,11 @@ Step 2 – I checked which web hosts have hardware inventory data, by searching 
 
 Step 3 – I then clicked one of the “gaccrux” hardware events and clicked view events and show more which revealed the processor number used on the web server under the CPU_TYPE field.
 
+# Question 4:
+
+Step 1 – Restricted the search to AWS cloud trail logs so that I was only looking at API audit events.
+
+Step 2 – I searched specifically for API that are able to make a bucket public by filtering the S3 ACL change action.
+
+Step 3 – Located the events and scrolled down to eventide and copied and pasted. First ID was incorrect but second which I highlighted in the screenshot was correct.
 
