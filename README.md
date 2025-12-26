@@ -36,3 +36,13 @@ Step 2 – a keyword search was used for MFA related fields, this is so that fie
 Step 3 – opened the events in order where the log shows False.
 
 Step 4 – Recorded the full JSON path for the field using the order that I opened the event. 
+
+Question 3:
+
+Step 1 – First checked what source types were available in the dataset by using the source count query. This then confirmed there is hardware source type available.
+
+Step 2 – I checked which web hosts have hardware inventory data, by searching the hardware source type and counted events by host. This then confirmed which hosts actually have hardware records available in the dataset.
+
+Step 3 – I then clicked one of the “gaccrux” hardware events and clicked view events and show more which revealed the processor number used on the web server under the CPU_TYPE field.
+
+
