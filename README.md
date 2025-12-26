@@ -53,3 +53,6 @@ Step 2 – I searched specifically for API that are able to make a bucket public
 
 Step 3 – Located the events and scrolled down to eventide and copied and pasted. First ID was incorrect but second which I highlighted in the screenshot was correct.
 
+# Question 5:
+
+Step 1 – I had gone back to question 1 where I had restricted the search to user activity and extracted user names. That is where I found Buds username.
