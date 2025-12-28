@@ -56,3 +56,14 @@ Step 3 – Located the events and scrolled down to eventide and copied and paste
 # Question 5:
 
 Step 1 – I had gone back to question 1 where I had restricted the search to user activity and extracted user names. That is where I found Buds username.
+
+# Question 6:
+
+Step 1 – Restricted the dataset to Cloud Trail events by using “aws:cloudtrail” as the source type as well as filtering specifically for the S3 persmission change by using “eventName=PutBucketAcl”
+
+Step 2 – I extracted nested cloud trail JSON fields by using “spath” to ensure the nested fields were parsed correctly and accessible in the results.
+
+Step 3 – I used the “table” command to display only the required fields to help answer the question. Which made it easier for me to read the bucket name without having to dig through the full raw event.
+
+Step 4 – The bucket name was displayed under “requestParameters.bucketName”  which I entered.
+
