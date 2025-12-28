@@ -67,3 +67,15 @@ Step 3 – I used the “table” command to display only the required fields to
 
 Step 4 – The bucket name was displayed under “requestParameters.bucketName”  which I entered.
 
+# Question 7:
+
+Step 1 -  Searched the S3 access logs dataset. The keyword “frothlywebcode” was used to filter the results to requests that are related to that bucket.
+
+Step 2 – This search confirmed the bucket name is appearing in events and helped as somewhat of a sanity check however the search was too broad and showed several results.
+
+Step 3 – Made a tighter search to isolate upload events and extract the filename. I added “REST.PUT.OBJECT” which will identify object upload (PUT) operations.
+
+Step 4- This reduced the results and only displayed events where there was an attempt to upload something to the bucket.
+
+Step 5 – Checked the HTTP  status code to look for successful uploads the code being 200 and 2 of the events had the code. I then copied and pasted the filenames until the highlighted one in the screen shot “OPEN_BUCKET_PLEASE_FIX.txt.” came up as the correct filename.
+
