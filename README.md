@@ -5,7 +5,7 @@ Student: Alvin Mparutsa.
 
 Module: COMP3010 Security Operations & Incident Management.
 
-## 1.Introduction:
+# 1.Introduction:
 
 This report is used to document an investigation carried out in Splunk, This is done using the BOTSv3 dataset. The dataset is used to simulate a security scenario within a fictional organisation. 
 
