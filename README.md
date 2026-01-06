@@ -79,3 +79,13 @@ Step 4- This reduced the results and only displayed events where there was an at
 
 Step 5 – Checked the HTTP  status code to look for successful uploads the code being 200 and 2 of the events had the code. I then copied and pasted the filenames until the highlighted one in the screen shot “OPEN_BUCKET_PLEASE_FIX.txt.” came up as the correct filename.
 
+# Question 8:
+
+Step 1- Confirmed the right data source and useful fields by using the source type winhostmon and looking for OS related keywords. This then helped confirm that the source type contains operating system telemetry and helped narrow the fields to focus on. 
+
+Step 2- Finding the odd one out by pivoting the operating system records and summarising OS host using a stats view. The results the show most endpoints are Microsoft windows 10 pro except BSTOLL-L which is Microsoft windows 10 enterprise. This then shows BSTOLL-L as the endpoint using a different windows edition.
+
+Step 3 – After finding BSTOLL-L, I Identified where FQDN is visible in other sources by  checking what other source types contained relevant naming data done by counting events by host/source type. This showed syslog data available via “host=splunkhwf.froth.ly” which is useful because it includes host naming details. 
+
+Step 4 – Clicked on view event and the events display the endpoint as “BSTOLL-L.froth.ly”. This then provides the required FQDN.
+
