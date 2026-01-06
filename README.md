@@ -17,7 +17,7 @@ This report is used to document an investigation carried out in Splunk, This is 
 
 # Evidence: 
 
-# Question 1:
+## Question 1:
 
 Step 1 – Opened Splunk search and reporting section and confirmed that the dataset was available. Checked the botsv3 index contained events by setting the range to ALL time so that any missing older vlogs are avoided. 
 
@@ -29,7 +29,7 @@ Step 4 – Extracted the usernames to collect the unique IAM usernames that appe
 
 Step 5 – Formatted the output to align with the requirements of the quiz.
 
-# Question 2:
+## Question 2:
 
 Step 1 – Excluded the console login events by “NoteventNmae=ConsoleLogin” this made the results only cover API activity and not sign ins.
 
@@ -39,7 +39,7 @@ Step 3 – opened the events in order where the log shows False.
 
 Step 4 – Recorded the full JSON path for the field using the order that I opened the event. 
 
-# Question 3:
+## Question 3:
 
 Step 1 – First checked what source types were available in the dataset by using the source count query. This then confirmed there is hardware source type available.
 
@@ -47,7 +47,7 @@ Step 2 – I checked which web hosts have hardware inventory data, by searching 
 
 Step 3 – I then clicked one of the “gaccrux” hardware events and clicked view events and show more which revealed the processor number used on the web server under the CPU_TYPE field.
 
-# Question 4:
+## Question 4:
 
 Step 1 – Restricted the search to AWS cloud trail logs so that I was only looking at API audit events.
 
@@ -55,11 +55,11 @@ Step 2 – I searched specifically for API that are able to make a bucket public
 
 Step 3 – Located the events and scrolled down to eventide and copied and pasted. First ID was incorrect but second which I highlighted in the screenshot was correct.
 
-# Question 5:
+## Question 5:
 
 Step 1 – I had gone back to question 1 where I had restricted the search to user activity and extracted user names. That is where I found Buds username.
 
-# Question 6:
+## Question 6:
 
 Step 1 – Restricted the dataset to Cloud Trail events by using “aws:cloudtrail” as the source type as well as filtering specifically for the S3 persmission change by using “eventName=PutBucketAcl”
 
@@ -69,7 +69,7 @@ Step 3 – I used the “table” command to display only the required fields to
 
 Step 4 – The bucket name was displayed under “requestParameters.bucketName”  which I entered.
 
-# Question 7:
+## Question 7:
 
 Step 1 -  Searched the S3 access logs dataset. The keyword “frothlywebcode” was used to filter the results to requests that are related to that bucket.
 
@@ -81,7 +81,7 @@ Step 4- This reduced the results and only displayed events where there was an at
 
 Step 5 – Checked the HTTP  status code to look for successful uploads the code being 200 and 2 of the events had the code. I then copied and pasted the filenames until the highlighted one in the screen shot “OPEN_BUCKET_PLEASE_FIX.txt.” came up as the correct filename.
 
-# Question 8:
+## Question 8:
 
 Step 1- Confirmed the right data source and useful fields by using the source type winhostmon and looking for OS related keywords. This then helped confirm that the source type contains operating system telemetry and helped narrow the fields to focus on. 
 
