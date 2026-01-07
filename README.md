@@ -18,7 +18,7 @@ This report is used to document an investigation carried out in Splunk, This is 
 
 My investigation environment is Linux host which I ran Splunk enterprise on with the dataset installed as an add on and validated through successful search results in Splunk. The installation evidence screenshots show the key setup process and stages. Downloading the dataset, installing splunk via package installation, starting Splunk and confirming web service on port 8000, setting credentials, restating Splunk and confirming the dataset is available after setup, I used Splunk search to run the targeted queries against the botsv3 index and relevant source types to build findings from host telemetry.
 
-## Scope and assumptions:
+# Scope and assumptions:
 
 -	The analysis is limited to events contained within the BOTSv3 dataset, so findings represent what is observable in those logs and not a live environment.
 -	The time range is set to all time within Splunk to avoid missing historical events.
@@ -27,7 +27,7 @@ My investigation environment is Linux host which I ran Splunk enterprise on with
 
 Overall, the objective is to demonstrate the full workflow: SEIM setup to dat validation to investigation searches to evidence backed conclusions aligned with SOC operations and incident handling practice. 
 
-## SOC Roles and Incident Handling Reflection:
+# SOC Roles and Incident Handling Reflection:
 A SOC’s job is to turn raw telemetry into action. In practice this is split across different tiers and roles, The BOTSv3 exercise maps well how a real SOC would work because it forces the same habits: 
 -	Validating data sources 
 -	Scoping an investigation 
@@ -39,6 +39,37 @@ A SOC’s job is to turn raw telemetry into action. In practice this is split ac
 ## Tier 1 (Triage/Monitoring):
 
 Tier 1 analysis main focus is on the “what looks unusual” aspect of things and “do we have enough data to investigate?” in my work, the equivalent step was confirming telemetry coverage ( e.g. verifying event volume and identifying which source types exist for a host). A good example is using broad searches and simple stats to confirm that the logs exist and are searchable before trying to draw conclusions. This is exactly what Tier 1 should do to avoid false negatives caused by missing data.
+
+## Tier 2 (Investigation/Analysis):
+
+Tier 2 takes a triage signal and turns it into a defensible finding. My approach for question 8 is a clear example I began from the hint, endpoint OS information from winhostmon. Then counted OS editions across endpoints and found the odd one out running a different windows edition. Then pivoted into the specific host and used telemetry fields to derive the FQDN. This mirrors a real workflow:
+
+1.	Spot an anomaly 
+2.	Confirm its real 
+3.	Pivot to enrich the identity of the asset
+4.	Document the trail
+   
+## Tier 3 /Engineering (Detection and Content):
+
+While in my work I wasn’t writing production detections, parts of the workflow reflect Tier 3 thinking such as validating which fields exist, adjusting searches when a field isn’t populated as expected, and using safe logic. For example combining potential domain fields. To make the query resilient. This is the difference between a one-off search and something that would work reliably.
+
+# Incident handling phases and SOC relevance:
+
+## Preparation:
+
+The installation and dataset validation steps are preparation in an incident response sense. Without reliable ingestion a SOC can’t effectively respond. From correct time ranges, working authentication and access.
+
+## Detection and Analysis:
+
+The Splunk searches represent the detection/analysis phase. Counting OS editions by host is lightweight detection as this can reveal misconfigurations, unmanaged builds, or suspicious drift. Inconsistent endpoint baselines are a common precursor to security gaps.
+
+## Containment/Eradication/Recovery (Reflection). 
+
+In a real SOC, once the outlier is identified (by FQDN), the next steps would be to check whether it is authorised, validate patch level and security tooling presence, review authentication events, and apply containment if there are signs of compromise. Even when the task only wants identification, thinking in IR phases keeps the outcome actionable, not just descriptive.
+
+## What I learned:
+
+The biggest takeaway is that good investigations are as much about data quality and method as they are about the answer. Things like screenshots, query outputs, data source, how the anomaly was identified and endpoint identity confirmation show reasoning chain and are the standard expected in SOC work. repeatable steps, evidence-backed conclusions, and clear communication that a non-technical stakeholder can trust. 
 
 
 # Evidence: 
