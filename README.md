@@ -78,6 +78,7 @@ The biggest takeaway is that good investigations are as much about data quality 
 
 <img width="989" height="840" alt="Question 1 answer" src="https://github.com/user-attachments/assets/cffaacf5-e702-439c-87c5-1fc879339f91" />
 
+
 Step 1 – Opened Splunk search and reporting section and confirmed that the dataset was available. Checked the botsv3 index contained events by setting the range to ALL time so that any missing older vlogs are avoided. 
 
 Step 2 – Filtered the dataset to AWS CloudTrail logs. This was done by searching in the BOTS index and specifying the CloudTrail source type.
