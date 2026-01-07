@@ -34,7 +34,7 @@ A SOC’s job is to turn raw telemetry into action. In practice this is split ac
 -	Pivoting between hosts and source types 
 -	Documenting evidence
 
-## How the SOC tiers map to what I did:
+# How the SOC tiers map to what I did:
 
 ## Tier 1 (Triage/Monitoring):
 
