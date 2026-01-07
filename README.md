@@ -76,6 +76,8 @@ The biggest takeaway is that good investigations are as much about data quality 
 
 ## Question 1:
 
+<img width="989" height="840" alt="Question 1 answer" src="https://github.com/user-attachments/assets/cffaacf5-e702-439c-87c5-1fc879339f91" />
+
 Step 1 – Opened Splunk search and reporting section and confirmed that the dataset was available. Checked the botsv3 index contained events by setting the range to ALL time so that any missing older vlogs are avoided. 
 
 Step 2 – Filtered the dataset to AWS CloudTrail logs. This was done by searching in the BOTS index and specifying the CloudTrail source type.
@@ -87,6 +89,10 @@ Step 4 – Extracted the usernames to collect the unique IAM usernames that appe
 Step 5 – Formatted the output to align with the requirements of the quiz.
 
 ## Question 2:
+
+<img width="993" height="833" alt="Question 2 p1" src="https://github.com/user-attachments/assets/89e20e91-2f5f-4f74-8524-b529a3ea4c12" />
+
+<img width="1700" height="1099" alt="question 2 p2" src="https://github.com/user-attachments/assets/8a8f3c8b-c525-49f0-8870-d9bbbb4a7293" />
 
 Step 1 – Excluded the console login events by “NoteventNmae=ConsoleLogin” this made the results only cover API activity and not sign ins.
 
