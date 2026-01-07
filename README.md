@@ -7,13 +7,39 @@ Module: COMP3010 Security Operations & Incident Management.
 
 # 1.Introduction:
 
-This report is used to document an investigation carried out in Splunk, This is done using the BOTSv3 dataset. The dataset is used to simulate a security scenario within a fictional organisation. 
+This report is used to document an investigation carried out in Splunk, This is done using the BOTSv3 dataset. The dataset is used to simulate a security scenario within a fictional organisation. This coursework is set in a SOC (Security Operations Centre) context using the dataset in Splunk as a realistic pre-indexed set of windows, network and security telemetry that stimulates normal enterprise activity which is mixed with attacker behaviour. The aims are to show that I can, set up a working SIEM environment. Ingest and validate security data and use Splunk searches to answer investigation questions in such a way that reflects real SOC workflows and decision making.
 
 ## Objectives:
 
--	The objectives of this investigation were to download and set up a working Splunk environment on Ubuntu and validate the dataset
+-	The objectives of this investigation were to download and set up a working Splunk environment on Ubuntu.
+-	Ingest and validate the BOTSv3 dataset and confirming that the key indexes and source types are searchable 
 -	Use the Splunk to help answer the question set and each answer should be supported with evidence
 -	Present the findings as a SOC-style report which is led by the evidence.
+
+My investigation environment is Linux host which I ran Splunk enterprise on with the dataset installed as an add on and validated through successful search results in Splunk. The installation evidence screenshots show the key setup process and stages. Downloading the dataset, installing splunk via package installation, starting Splunk and confirming web service on port 8000, setting credentials, restating Splunk and confirming the dataset is available after setup, I used Splunk search to run the targeted queries against the botsv3 index and relevant source types to build findings from host telemetry.
+
+## Scope and assumptions:
+
+-	The analysis is limited to events contained within the BOTSv3 dataset, so findings represent what is observable in those logs and not a live environment.
+-	The time range is set to all time within Splunk to avoid missing historical events.
+-	Host and domain fields may not be present consistently across source types, so the approach includes validating available fields and using the most reliable identifiers such as host, Computer Name, DND Domain, Domain) where present.
+-	The focus is on SOC-relevant outcomes: identifying anomalies, validating endpoints/data sources, and producing defensible evidence (queries + output) rather than purely “getting the answer”.
+
+Overall, the objective is to demonstrate the full workflow: SEIM setup to dat validation to investigation searches to evidence backed conclusions aligned with SOC operations and incident handling practice. 
+
+## SOC Roles and Incident Handling Reflection:
+A SOC’s job is to turn raw telemetry into action. In practice this is split across different tiers and roles, The BOTSv3 exercise maps well how a real SOC would work because it forces the same habits: 
+-	Validating data sources 
+-	Scoping an investigation 
+-	Pivoting between hosts and source types 
+-	Documenting evidence
+
+## How the SOC tiers map to what I did:
+
+## Tier 1 (Triage/Monitoring):
+
+Tier 1 analysis main focus is on the “what looks unusual” aspect of things and “do we have enough data to investigate?” in my work, the equivalent step was confirming telemetry coverage ( e.g. verifying event volume and identifying which source types exist for a host). A good example is using broad searches and simple stats to confirm that the logs exist and are searchable before trying to draw conclusions. This is exactly what Tier 1 should do to avoid false negatives caused by missing data.
+
 
 # Evidence: 
 
