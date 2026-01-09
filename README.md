@@ -221,6 +221,13 @@ Step 5 – Checked the HTTP  status code to look for successful uploads the code
 
 ## Question 8:
 
+<img width="1710" height="1107" alt="Question 8p1" src="https://github.com/user-attachments/assets/845911dd-0372-4066-869d-654d0b2eabbc" />
+
+<img width="990" height="827" alt="Question 8 p2" src="https://github.com/user-attachments/assets/522ce616-6ac6-479a-a4d0-a494765b298e" />
+
+<img width="1710" height="1107" alt="Question 8 p3" src="https://github.com/user-attachments/assets/cf546b11-b65e-4dd4-96d4-de316fb9bde2" />
+
+<img width="1710" height="1107" alt="Question 8 p4" src="https://github.com/user-attachments/assets/976df5b1-ff75-4fb0-8620-51a1411cfbf8" />
 
 Step 1- Confirmed the right data source and useful fields by using the source type winhostmon and looking for OS related keywords. This then helped confirm that the source type contains operating system telemetry and helped narrow the fields to focus on. 
 
