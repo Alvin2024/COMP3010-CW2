@@ -191,3 +191,10 @@ Step 3 – After finding BSTOLL-L, I Identified where FQDN is visible in other s
 
 Step 4 – Clicked on view event and the events display the endpoint as “BSTOLL-L.froth.ly”. This then provides the required FQDN.
 
+# Conclusion
+
+This coursework used Splunk with the BOTSv3 dataset to carry out a SOC-style investigation using realistic endpoint and cloud telemetry. Splunk Enterprise was successfully installed on Ubuntu (via UTM), Splunk Web was confirmed working, and the BOTSv3 dataset was validated as searchable before investigation began.
+
+Using evidence-led Splunk searches I answered the guided questions by filtering to relevant source types summarising results with stats and pivoting between sources to confirm findings. Key examples include identifying active IAM users in CloudTrail and using WinHostMon operating system data to find an outlier endpoint and confirm its FQDN as BSTOLL-L.froth.ly.
+
+Overall, the work demonstrates a clear SOC workflow: validate data, investigate using repeatable searches, and support conclusions with defensible evidence.
