@@ -79,6 +79,13 @@ Splunk Enterprise was installed on an Ubuntu Linux machine. This was run through
 
 ## Installation
 
+## Challenges Faced:
+
+<img width="846" height="640" alt="No space downloading" src="https://github.com/user-attachments/assets/7187d750-ce84-435a-aebe-5d934746d10a" />
+
+The main challenge I faced was not having allocated enough space to install Splunk onto ubuntu, I then deleted and reinstalled Linux and allocated enough space to be able to complete the installation. 
+
+
 <img width="1691" height="1106" alt="Screenshot 2025-12-16 at 23 39 48" src="https://github.com/user-attachments/assets/b18b580f-27ef-48ef-b985-7f9826ff054d" />
 
 <img width="1395" height="666" alt="Installaton p1" src="https://github.com/user-attachments/assets/bc2d58b0-5df0-47a9-bbe2-76a6408e23f1" />
