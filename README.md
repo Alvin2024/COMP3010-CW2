@@ -71,6 +71,43 @@ In a real SOC, once the outlier is identified (by FQDN), the next steps would be
 
 The biggest takeaway is that good investigations are as much about data quality and method as they are about the answer. Things like screenshots, query outputs, data source, how the anomaly was identified and endpoint identity confirmation show reasoning chain and are the standard expected in SOC work. repeatable steps, evidence-backed conclusions, and clear communication that a non-technical stakeholder can trust. 
 
+# Installation and Data Preparation 
+
+## Environment
+
+Splunk Enterprise was installed on an Ubuntu Linux machine. This was run through an emulator on a MacBook via the application UTM. This was used as the investigation platform for the BOTSv3 dataset. The goal was to install Splunk, ensure Splunk web was reachable and prepare the dataset so it could be searched and used for guided investigation questions. 
+
+## Installation
+
+The installation was done using terminal.
+
+Downloaded files: 
+-	The Splunk installer and BOTSv3 dataset files were saved logically
+
+Installed Splunk:
+-	Splunk was installed using dpkg (sudo dpkg -I splunk-*.deb)
+
+Fixed dependencies:
+-	Any missing packages were resolved using (sudo apt-get f install)
+
+Started Splunk: 
+-	Splunk was started and license accepted
+
+Verified Splunk Web:
+-	Startup output confirmed Splunk Web was running (port 8000)
+
+Configured admin + restart:
+-	Admin credentials were set and Splunk was restarted to apply changes (sudo /opt/splunk/bin/splunk restart)
+
+## Data preparation (BOTSv3)
+
+Confirmed dataset app present:
+-	The BOTSv3 dataset app was verified as installed/enabled
+
+Validated searches:
+-	The dataset was confirmed searchable in Splunk Web by checking the dataset index returned events and also making sure time range was set to All time.
+This completed the setup and made sure Splunk and the dataset were ready for the investigation questions.
+
 
 # Evidence: 
 
