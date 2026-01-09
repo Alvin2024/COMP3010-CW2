@@ -109,7 +109,7 @@ Validated searches:
 This completed the setup and made sure Splunk and the dataset were ready for the investigation questions.
 
 
-# Evidence: 
+# Guided Questons: 
 
 ## Question 1:
 
