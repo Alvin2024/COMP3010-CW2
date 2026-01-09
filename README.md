@@ -79,6 +79,21 @@ Splunk Enterprise was installed on an Ubuntu Linux machine. This was run through
 
 ## Installation
 
+<img width="1691" height="1106" alt="Screenshot 2025-12-16 at 23 39 48" src="https://github.com/user-attachments/assets/b18b580f-27ef-48ef-b985-7f9826ff054d" />
+
+<img width="1395" height="666" alt="Installaton p1" src="https://github.com/user-attachments/assets/bc2d58b0-5df0-47a9-bbe2-76a6408e23f1" />
+
+<img width="1638" height="411" alt="Installation p2" src="https://github.com/user-attachments/assets/000cdc54-a7d0-428f-a8e7-df137f0ffb37" />
+
+<img width="1645" height="814" alt="Installation p3" src="https://github.com/user-attachments/assets/4d6a4b77-b844-4333-a921-97724de80e86" />
+
+<img width="1643" height="575" alt="Insatlation 4" src="https://github.com/user-attachments/assets/82d21997-ec40-47cd-8fe2-add0eecca08c" />
+
+<img width="1647" height="912" alt="Installation 5" src="https://github.com/user-attachments/assets/dcff3112-f6a2-4180-add0-00b3accd8d86" />
+
+<img width="1648" height="888" alt="instalation 6" src="https://github.com/user-attachments/assets/5eaaf4d2-c42f-4069-a490-b73b9ebb8ccf" />
+
+
 The installation was done using terminal.
 
 Downloaded files: 
@@ -141,6 +156,13 @@ Step 4 – Recorded the full JSON path for the field using the order that I open
 
 ## Question 3:
 
+<img width="1709" height="1067" alt="Question 3 p1" src="https://github.com/user-attachments/assets/d7c3c173-198a-428d-abaa-55ee66dac49a" />
+
+<img width="1700" height="1061" alt="Question 3 p3" src="https://github.com/user-attachments/assets/35786392-da1a-4002-ba65-00878fbb8777" />
+
+<img width="1708" height="1068" alt="question 3 p5" src="https://github.com/user-attachments/assets/1744e225-954f-4712-b18d-312b60a16623" />
+
+
 Step 1 – First checked what source types were available in the dataset by using the source count query. This then confirmed there is hardware source type available.
 
 Step 2 – I checked which web hosts have hardware inventory data, by searching the hardware source type and counted events by host. This then confirmed which hosts actually have hardware records available in the dataset.
@@ -148,6 +170,11 @@ Step 2 – I checked which web hosts have hardware inventory data, by searching 
 Step 3 – I then clicked one of the “gaccrux” hardware events and clicked view events and show more which revealed the processor number used on the web server under the CPU_TYPE field.
 
 ## Question 4:
+
+<img width="1706" height="970" alt="question 4 p1" src="https://github.com/user-attachments/assets/0e9481e3-7d46-448c-8917-4d8427059f83" />
+
+<img width="899" height="535" alt="question 4 p2" src="https://github.com/user-attachments/assets/d5c9e0a5-9ac6-4890-a228-5f4499949bea" />
+
 
 Step 1 – Restricted the search to AWS cloud trail logs so that I was only looking at API audit events.
 
@@ -157,9 +184,15 @@ Step 3 – Located the events and scrolled down to eventide and copied and paste
 
 ## Question 5:
 
+<img width="989" height="840" alt="Question 1 answer" src="https://github.com/user-attachments/assets/713bd1b1-456d-4148-80f7-7c738665bc10" />
+
+
 Step 1 – I had gone back to question 1 where I had restricted the search to user activity and extracted user names. That is where I found Buds username.
 
 ## Question 6:
+
+<img width="857" height="535" alt="Question 6" src="https://github.com/user-attachments/assets/75a2dc52-6c89-47d6-b4b8-ded9b6067b1c" />
+
 
 Step 1 – Restricted the dataset to Cloud Trail events by using “aws:cloudtrail” as the source type as well as filtering specifically for the S3 persmission change by using “eventName=PutBucketAcl”
 
@@ -170,6 +203,11 @@ Step 3 – I used the “table” command to display only the required fields to
 Step 4 – The bucket name was displayed under “requestParameters.bucketName”  which I entered.
 
 ## Question 7:
+
+<img width="1710" height="1075" alt="Question 7 p1" src="https://github.com/user-attachments/assets/24f92866-fdce-450d-892d-2795cc01af95" />
+
+<img width="1710" height="1074" alt="Question 7 p2" src="https://github.com/user-attachments/assets/1376e60b-2d29-49fe-b198-aabe2b7acddc" />
+
 
 Step 1 -  Searched the S3 access logs dataset. The keyword “frothlywebcode” was used to filter the results to requests that are related to that bucket.
 
@@ -182,6 +220,7 @@ Step 4- This reduced the results and only displayed events where there was an at
 Step 5 – Checked the HTTP  status code to look for successful uploads the code being 200 and 2 of the events had the code. I then copied and pasted the filenames until the highlighted one in the screen shot “OPEN_BUCKET_PLEASE_FIX.txt.” came up as the correct filename.
 
 ## Question 8:
+
 
 Step 1- Confirmed the right data source and useful fields by using the source type winhostmon and looking for OS related keywords. This then helped confirm that the source type contains operating system telemetry and helped narrow the fields to focus on. 
 
